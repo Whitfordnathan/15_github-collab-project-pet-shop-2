@@ -9,9 +9,24 @@
 // Select the input field and add an 'input' event listener.
 // Hint: const searchInput = document.getElementById('pet-search');
 
+const captureInput = document.getElementById("pet-search");
+captureInput.addEventListener("input",filter);
+
 // 3. ARRAY FILTERING (Arrays & Loops):
 // Inside the event listener, use the .filter() method on the 'petImages' array.
 // It should return only filenames that include the characters typed in the search bar.
+
+function filter() {
+const getPetImage = captureInput.value.toLocaleLowerCase();
+
+const filteredImages = petImages.filter(function(fileName){
+  return fileName.toLowerCase().includes(getPetImage);
+});
+console.log(filteredImages);
+}
+
+// let getPetImage = petImages.filter((petNames)) => petNames
+
 
 // 4. CONDITIONAL SPECIES LOGIC:
 // Create two buttons: "Show Cats" and "Show Dogs".
