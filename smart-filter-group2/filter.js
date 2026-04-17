@@ -25,6 +25,9 @@ const filteredImages = petImages.filter(function(fileName){
 console.log(filteredImages);
 }
 
+
+
+
 // let getPetImage = petImages.filter((petNames)) => petNames
 
 
